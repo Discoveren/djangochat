@@ -10,7 +10,7 @@ def rooms(request):
     return render(request, 'room/rooms.html', {'rooms': rooms})
 
 @login_required
-def rooms(request, slug):
+def room(request, slug):
     room = Room.objects.get(slug=slug)
 
-    return render(request, 'room/room.html', {'room': room})
+    return render(request, 'room/room.html', {'room': room})    
